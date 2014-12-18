@@ -13,4 +13,12 @@ document.addEventListener('keyup', function (e) {
   } else if (e.keyCode == 'S'.charCodeAt(0) && e.ctrlKey) {
     clickInput('save');
   }
+
+  document.getElementById('open').addEventListener('change', function (e) {
+    file.open(this.value, document);
+  });
+
+  document.getElementById('save').addEventListener('change', function (e) {
+    file.save(this.value, document);
+  });
 });
